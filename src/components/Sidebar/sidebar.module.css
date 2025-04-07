@@ -1,0 +1,52 @@
+@reference "../../index.css";
+
+.sidebar {
+  @apply bg-gradient-to-bl from-[#03045e] to-[#0f4766] 
+         w-64 fixed z-10 left-0 top-0 h-full min-h-screen flex text-white pt-7 pb-3  flex-col;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar_logo {
+  @apply flex items-center gap-2 font-bold font-concert-one text-xl mb-6 px-6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.drop_shadow_lg {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.sidebar_item {
+  @apply flex items-center space-x-3 py-3 px-5 text-base font-ubuntu cursor-pointer font-medium transition-all duration-300;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sidebar_item:hover {
+  @apply text-white bg-inherit;
+  transform: translateX(5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar_item_active {
+  @apply bg-white text-[#03045e] font-bold my-2 rounded-2xl;
+}
+
+.sidebar_item::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 50%;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.sidebar_icon {
+  @apply text-lg;
+  transition: transform 0.1s ease-in-out;
+}
+
+.sidebar_item:hover .sidebar_icon {
+  transform: scale(1.1);
+}

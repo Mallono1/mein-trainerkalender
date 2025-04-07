@@ -1,0 +1,34 @@
+@reference "../../index.css";
+
+.login_container {
+  @apply flex flex-grow w-full font-ubuntu;
+}
+
+.login_left {
+  @apply w-full p-4 lg:p-0 lg:w-1/2 min-h-screen flex justify-center;
+}
+
+.login_right {
+  @apply w-1/2 bg-gradient-to-tl min-h-screen from-[#0077b6] via-[#00b4d8] to-[#90e0ef] hidden lg:flex items-center justify-center;
+}
+
+.login_title {
+  @apply flex items-center justify-center gap-1 font-bold text-slate-800 font-concert-one text-5xl mb-10;
+}
+
+.login_welcome {
+  @apply text-slate-800 font-ubuntu text-2xl mb-2 font-bold;
+}
+
+.login_company_description {
+  @apply text-slate-500 font-ubuntu mb-10 text-sm;
+}
+
+.login_input_box {
+  @apply w-full relative pl-16 pr-5 py-3 border border-gray-300 rounded-full font-ubuntu text-sm focus:outline-none focus:ring-2 focus:ring-[#90e0ef] focus:border-transparent;
+}
+
+.input_icon {
+  @apply absolute top-1/2 left-5 text-slate-600 border-r border-gray-300 pr-3;
+  transform: translateY(-50%);
+}
